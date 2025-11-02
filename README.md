@@ -1,0 +1,11 @@
+# My Learning Log and Building Journey
+👋 **Welcome! This repository documents my ongoing growth as a developer.**\
+
+## Structure
+- **Covered** — Topics I’ve studied and gained a working understanding of.
+- **In-Prgress** — Topics and tools I'm currently studying.
+- **Building** — Real-world projects where I apply my knowledge.
+
+> On the Same Path? If you’re on a similar learning journey, feel free to connect — always excited to exchange ideas and grow with fellow developers!
+
+
