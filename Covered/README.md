@@ -35,7 +35,7 @@ This section highlights the core technologies and concepts I’ve already learne
 - C/C++ (Syntax, concepts)
 - Java (Syntax, OOPs, Collections)
 
-## ☁️ Deployment & Cloud
+## Deployment & Cloud
 - Docker (End-to-End)  
 - **Serverless Backends** — AWS Lambda and Cloudflare Workers using Hono.  
 - **AWS & Cloud Services** — Deploying to EC2, S3, CDNs, and configuring reverse proxies with Nginx.  
