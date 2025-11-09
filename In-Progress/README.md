@@ -1,22 +1,22 @@
 # In-Progress
 
-This section contains the technologies and topics I’m currently exploring or deepening my understanding of.  
+This section contains the technologies and topics I’m currently exploring or deepening my understanding of.
 
 ## Technologies and topics
+
 - TypeScript
 - **Advanced Backend and System Design**
-    - Web RTC
-    - Redis
-    - Kafka
-    - DDoS Protection
-    - Rate Limiting
-    - Singleton Pattern
+  - Capacity Estimation
+  - AWS Auto Scaling Groups
+  - Indexing in Databases
+  - Normalization in Databases
+  - Sharding
+
 ## Upcoming / Next To Explore
-- Scaling Horizontal and Vertical
+
+- WebRTC
 - GRPC
-- Load Balancers and Proxies
-- Shardin, Replication, Resiliency
-- Container Orchestration
-- Kubernetes, Docker Swarm
-- CI / CD
-- Testing & Monitoring
+- Testing from Scratch
+- Unit Testing
+- Integration Testing
+- End-to-End Testing
