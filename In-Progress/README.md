@@ -6,17 +6,15 @@ This section contains the technologies and topics I’m currently exploring or d
 
 - TypeScript
 - **Advanced Backend and System Design**
-  - Capacity Estimation
-  - AWS Auto Scaling Groups
-  - Indexing in Databases
-  - Normalization in Databases
-  - Sharding
+  - GRPC
+  - Testing from Scratch
+  - Unit Testing
+  - Integration Testing
+  - End-to-End Testing
 
 ## Upcoming / Next To Explore
 
-- WebRTC
-- GRPC
-- Testing from Scratch
-- Unit Testing
-- Integration Testing
-- End-to-End Testing
+- Logging
+- Monitoring
+- Prometheus and Grafana
+- Kubernetes

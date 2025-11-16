@@ -18,8 +18,11 @@ This section highlights the core technologies and concepts I’ve already learne
 - **Database Management**
   - MongoDB + Mongoose
   - PostgreSQL + Prisma ORM
+  - Indexing in Databases
+  - Sharding & Normalization in Databases
 - **API Development**
   - REST APIs, WebSockets, and real-time communication.
+  - WebRTC
   - **OpenAPI Specification** — Auto-generated clients and standardized documentation.
 - **Authentication & Security**
   - JWT, Cookies, and OAuth (NextAuth).
@@ -29,6 +32,8 @@ This section highlights the core technologies and concepts I’ve already learne
   - Rate Limiting
   - Singleton Pattern
   - Vertical Scaling
+  - Capacity Estimation
+  - AWS Auto Scaling Groups
 
 ## Developer Tools & Practices
 
