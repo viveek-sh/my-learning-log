@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+//message type for User Data
+message User {
+    string name = 1;
+    string course = 2;
+}
+
+
+service UsersService {
+    //Add User to the list
+    rpc AddUser(User) returns (User);
+
+    //Get a User from their Name
+    rpc GetUserbyName(GetUserbyNameReq) returns (User);
+}
+
+message GetUserbyNameReq { 
+    string name = 1;
+}
