@@ -23,7 +23,8 @@ This section highlights the core technologies and concepts I’ve already learne
 - **API Development**
   - REST APIs, WebSockets, and real-time communication.
   - WebRTC
-  - **OpenAPI Specification** — Auto-generated clients and standardized documentation.
+  - gRPC
+  - OpenAPI Specification
 - **Authentication & Security**
   - JWT, Cookies, and OAuth (NextAuth).
   - Input validation (Zod), protected routes, and awareness of SQL injection vulnerabilities.
@@ -34,6 +35,9 @@ This section highlights the core technologies and concepts I’ve already learne
   - Vertical Scaling
   - Capacity Estimation
   - AWS Auto Scaling Groups
+- **Testing**
+  - Unit Testing
+  - Integration Testing
 
 ## Developer Tools & Practices
 

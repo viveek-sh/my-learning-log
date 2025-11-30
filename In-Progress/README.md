@@ -6,15 +6,15 @@ This section contains the technologies and topics I’m currently exploring or d
 
 - TypeScript
 - **Advanced Backend and System Design**
-  - GRPC
-  - Testing from Scratch
-  - Unit Testing
-  - Integration Testing
   - End-to-End Testing
+- **Observability**
+  - Logging
+  - Monitoring
+  - Prometheus
+  - Grafana
 
 ## Upcoming / Next To Explore
 
-- Logging
-- Monitoring
-- Prometheus and Grafana
 - Kubernetes
+- Kafka
+- Docker Swarm
