@@ -18,3 +18,9 @@ model Sum{
   num2    Int
   sum     Int
 }
+
+model User {
+  id    String @id @default(uuid())
+  email String @unique
+  name  String
+}
