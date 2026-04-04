@@ -1,0 +1,21 @@
+{
+  "name": "scalablews",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "vivek",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "redis": "^5.11.0",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/ws": "^8.18.1"
+  }
+}
