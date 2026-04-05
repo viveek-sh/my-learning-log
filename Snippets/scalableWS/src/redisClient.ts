@@ -16,11 +16,6 @@ export function sub(channel: string, callback: (message: string) => void) {
   });
 }
 
-export async function unsub(
-  channel: string,
-  callback: (message: string) => void,
-) {
-  await subClient.unsubscribe(channel, (message) => {
-    callback(message);
-  });
+export async function unsub(channel: string) {
+  await subClient.unsubscribe(channel);
 }

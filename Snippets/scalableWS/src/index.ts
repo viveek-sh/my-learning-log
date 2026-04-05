@@ -27,25 +27,60 @@ wss.on("connection", (ws) => {
       if (userMessage.type === "SUBSCRIBE") {
         const user = users[id];
         if (!user) return;
-        sub(userMessage.room, (message) => {
-          ws.send(message);
-        });
-        user.rooms.push(userMessage.room);
+
+        const room = userMessage.room;
+
+        // check BEFORE adding user
+        const alreadySubscribed = Object.values(users).some((u) =>
+          u.rooms.includes(room),
+        );
+
+        if (!alreadySubscribed) {
+          sub(room, (message) => {
+            const parsedMessage = JSON.parse(message);
+
+            Object.values(users).forEach((user) => {
+              if (user.rooms.includes(parsedMessage.room)) {
+                user.ws.send(parsedMessage.message);
+              }
+            });
+          });
+
+          console.log("Subscribed to:", room, " channel on Redis.");
+        }
+        user.rooms.push(room);
+
         console.log("New subscription:", { userId: id, rooms: user.rooms });
       }
 
       if (userMessage.type === "UNSUBSCRIBE") {
         const user = users[id];
         if (!user) return;
-        unsub(userMessage.room, (message) => {
-          ws.send(message);
-        });
-        user.rooms = user.rooms.filter((room) => room !== userMessage.room);
-        console.log("Subscriptions:", { userId: id, rooms: user.rooms });
+
+        const room = userMessage.room;
+
+        // remove from the Users obj
+        user.rooms = user.rooms.filter((r) => r !== room);
+
+        // check if anyone still subscribed
+        const stillHasUsers = Object.values(users).some((u) =>
+          u.rooms.includes(room),
+        );
+
+        if (!stillHasUsers) {
+          unsub(room);
+          console.log("Unsubscribed from:", room);
+        }
       }
 
       if (userMessage.type === "sendMessage") {
-        pub(userMessage.room, userMessage.message);
+        pub(
+          userMessage.room,
+          JSON.stringify({
+            room: userMessage.room,
+            message: userMessage.message,
+          }),
+        );
 
         // Use this block when not using PUB SUB
         // Object.keys(users).forEach((key) => {
@@ -63,6 +98,22 @@ wss.on("connection", (ws) => {
   });
 
   ws.on("close", () => {
+    const user = users[id];
+    if (!user) return;
+
+    user.rooms.forEach((room) => {
+      const stillHasUsers = Object.values(users)
+        .filter((u) => u !== user)
+        .some((u) => u.rooms.includes(room));
+
+      if (!stillHasUsers) {
+        unsub(room);
+        console.log("Unsubscribed from:", room);
+      }
+    });
+
     delete users[id];
   });
 });
+
+function userExsistOn() {}
